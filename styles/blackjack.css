@@ -1,0 +1,101 @@
+@import 'reset.css';
+@import 'deck.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body{
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+}
+
+header h1{
+    display: block;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+    font-family: algerian;
+}
+
+.table{
+    display: block;
+    height: calc(100vh - 104px);
+    background: rgb(2, 73, 37);
+    padding: 20px 0;
+}
+
+#house, #players{
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 320px;
+    clear: both;
+}
+.player{
+    color: #fff;
+    border: solid 2px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    font-family: algerian;
+}
+.hand{
+    overflow: auto;
+    clear: both;
+}
+.player.active{
+    border: solid 2px #fff;
+    background: rgba(255, 255, 255, .3);
+}
+.points{
+    color: yellow;
+}
+
+.deck{
+    width: 62px;
+    margin: 0 auto;
+    font-family: algerian;
+}
+.deck > div:first-of-type, .player > div:first-of-type{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#status{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+#status.active{
+    display: block;
+}
+#status-content{
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 20px 0;
+    top: 80px;
+    background: #000;
+    color: rgba(0, 255, 98, 0.829);
+    text-align: center;
+    font-size: 21px;
+    font-family: algerian;
+}
+#status-content.red{
+    color: red;
+}
+#status-btn{
+    display: block;
+    width: 120px;
+    padding: 5px 0;
+    background: yellow;
+    color: #222;
+    margin: 20px auto 0;
+}

@@ -1,0 +1,50 @@
+.card {
+    position: relative;
+    float: left;
+    margin: 5px;
+    width: 45px;
+    height: 70px;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #eee;
+    -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+.card p {
+    margin-top: 20px;
+    text-align: center;
+    font: 20px Georgia, Times New Roman, serif;
+}
+.card.suithearts, .card.suitdiamonds{
+    color: #900;
+}
+.card.suitspades, .card.suitclubs{
+    color: #222;
+}
+
+.card.suithearts:before, .card.suithearts:after{
+    content: '♥';
+}
+.card.suitspades:before, .card.suitspades:after{
+    content: '♠';
+}
+.card.suitdiamonds:before, .card.suitdiamonds:after{
+    content: "♦";
+}
+.card.suitclubs:before, .card.suitclubs:after{
+    content: '♣';
+}
+
+div[class*='suit']:before {
+    position: absolute;
+    font-size: 14px;
+    left: 5px;
+    top: 5px;
+}
+
+div[class*='suit']:after {
+    position: absolute;
+    font-size: 14px;
+    right: 5px;
+    bottom: 5px;
+}
